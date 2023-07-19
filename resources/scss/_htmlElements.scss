@@ -1,0 +1,56 @@
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+textarea,
+select,
+input[type="password"],{
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    height: 30px;
+}
+select{
+    padding: 0px 0px 0px 10px;
+}
+
+form{
+    background-color: white;
+}
+
+button{
+    color: dodgerblue;
+    border-radius: 3px;
+    border: 1px solid dodgerblue;
+    transition: all ease-in 100ms;
+
+    &:hover{
+        background-color: dodgerblue;
+        color: white;
+    }
+}
+
+.button-fill-blue{
+    background-color: dodgerblue;
+    color: white;
+
+    &:hover{
+        background-color: #085caf;
+    }
+}
+
+
+.input-group-default{
+    display: flex;
+    margin-bottom: 5px;
+    flex-direction: column;
+    padding: 10px;
+
+    label{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,93 @@
+@import "cssVaribales";
+@import "htmlElements";
+
+.pill{
+    grid-area: pill ;
+    display: flex;
+    justify-content: right;
+    p{
+        background-color: #3ed77c;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 3px;
+        border-radius: 7px;
+        @extend .small-text;
+    }
+}
+
+.app-card{
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px #bdbdbd;
+    border: 1px solid #d9d9d9;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #565656;
+    font-weight: 600;
+}
+
+h1{
+    font-size: 1.7em;
+}
+
+h1{
+    font-size: 1.6em;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.4em;
+}
+h4{
+    font-size: 1.3em;
+}
+h5{
+    font-size: 1.2em;
+}
+h6{
+    font-size: 1.1em;
+}
+
+p{
+    font-size: 1em;
+    color: #4d4d4d;
+}
+.lighter-text{
+    color: #8a8a8a;
+}
+
+.light-text{
+    color: #c4c4c4;
+}
+
+.white-text{
+    color: #ffffff;
+}
+
+.darker-text{
+    color: #313131;
+}
+
+.darkest-text{
+    color: #313131;
+}
+
+.black-text{
+    color: black;
+}
+
+.small-text{
+    font-size: 0.85em;
+}
+
+.x-small-text{
+    font-size: 0.8em;
+}
+
+.large-text{
+    font-size: 1.2em;
+}
+

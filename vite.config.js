@@ -3,10 +3,17 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
+    resolve:{
+        alias:{
+            '@':'/resources/js',
+            '@Components': '/resources/js/appComponents',
+        },
+        extensions: ['.js', '.vue', '.json', '.css', '.scss', '.sass']
+    },
     plugins: [
         laravel({
             input: 'resources/js/app.js',
-            refresh: true,
+            refresh: true
         }),
         vue({
             template: {
@@ -17,4 +24,9 @@ export default defineConfig({
             },
         }),
     ],
+    server: {
+        watch: {
+            usePolling:false
+        }
+    }
 });
