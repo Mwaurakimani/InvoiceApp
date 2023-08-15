@@ -1,0 +1,1106 @@
+{
+  "AppCardHolder.css": {
+    "file": "assets/AppCardHolder-e96e3168.css",
+    "src": "AppCardHolder.css"
+  },
+  "Payments.css": {
+    "file": "assets/Payments-a3bd0ac5.css",
+    "src": "Payments.css"
+  },
+  "TripCard.css": {
+    "file": "assets/TripCard-04577768.css",
+    "src": "TripCard.css"
+  },
+  "TripsListView.css": {
+    "file": "assets/TripsListView-a23b9db7.css",
+    "src": "TripsListView.css"
+  },
+  "_ActionMessage-58bfec5a.js": {
+    "file": "assets/ActionMessage-58bfec5a.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_AppCardHolder-797be531.js": {
+    "css": [
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/AppCardHolder-797be531.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_AppLayout-4939d6ab.js": {
+    "file": "assets/AppLayout-4939d6ab.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_AuthenticationCard-1373d4d3.js": {
+    "file": "assets/AuthenticationCard-1373d4d3.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_AuthenticationCardLogo-94d22354.js": {
+    "file": "assets/AuthenticationCardLogo-94d22354.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_Checkbox-d48fcdaf.js": {
+    "file": "assets/Checkbox-d48fcdaf.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_DangerButton-18c99615.js": {
+    "file": "assets/DangerButton-18c99615.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_DialogModal-833e6566.js": {
+    "file": "assets/DialogModal-833e6566.js",
+    "imports": [
+      "_SectionTitle-e1930051.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_DriverCard-e746b9a0.js": {
+    "file": "assets/DriverCard-e746b9a0.js",
+    "imports": [
+      "_AppCardHolder-797be531.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_FormSection-70496723.js": {
+    "file": "assets/FormSection-70496723.js",
+    "imports": [
+      "resources/js/app.js",
+      "_SectionTitle-e1930051.js"
+    ]
+  },
+  "_InputError-c29abaa3.js": {
+    "file": "assets/InputError-c29abaa3.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_InputLabel-dd70809d.js": {
+    "file": "assets/InputLabel-dd70809d.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_PrimaryButton-ccf1e96d.js": {
+    "file": "assets/PrimaryButton-ccf1e96d.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_SecondaryButton-76b1d001.js": {
+    "file": "assets/SecondaryButton-76b1d001.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_SectionBorder-8e61384f.js": {
+    "file": "assets/SectionBorder-8e61384f.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_SectionTitle-e1930051.js": {
+    "file": "assets/SectionTitle-e1930051.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_TextInput-8a3f439e.js": {
+    "file": "assets/TextInput-8a3f439e.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_TripCard-a43d66ad.js": {
+    "css": [
+      "assets/TripCard-04577768.css"
+    ],
+    "file": "assets/TripCard-a43d66ad.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_TripsListView-a4bf4a70.js": {
+    "css": [
+      "assets/TripsListView-a23b9db7.css"
+    ],
+    "file": "assets/TripsListView-a4bf4a70.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "_VehicleCard-28ce5e64.js": {
+    "file": "assets/VehicleCard-28ce5e64.js",
+    "imports": [
+      "_AppCardHolder-797be531.js",
+      "resources/js/app.js"
+    ]
+  },
+  "_lodash-b37a624c.js": {
+    "file": "assets/lodash-b37a624c.js",
+    "imports": [
+      "resources/js/app.js"
+    ]
+  },
+  "resources/js/Pages/API/Index.vue": {
+    "file": "assets/Index-ed7f84c2.js",
+    "imports": [
+      "resources/js/Pages/API/Partials/ApiTokenManager.vue",
+      "_AppLayout-4939d6ab.js",
+      "resources/js/app.js",
+      "_ActionMessage-58bfec5a.js",
+      "_DialogModal-833e6566.js",
+      "_SectionTitle-e1930051.js",
+      "_Checkbox-d48fcdaf.js",
+      "_DangerButton-18c99615.js",
+      "_FormSection-70496723.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_SecondaryButton-76b1d001.js",
+      "_SectionBorder-8e61384f.js",
+      "_TextInput-8a3f439e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/API/Index.vue"
+  },
+  "resources/js/Pages/API/Partials/ApiTokenManager.vue": {
+    "file": "assets/ApiTokenManager-6dfa45a4.js",
+    "imports": [
+      "resources/js/app.js",
+      "_ActionMessage-58bfec5a.js",
+      "_DialogModal-833e6566.js",
+      "_Checkbox-d48fcdaf.js",
+      "_DangerButton-18c99615.js",
+      "_FormSection-70496723.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_SecondaryButton-76b1d001.js",
+      "_SectionBorder-8e61384f.js",
+      "_TextInput-8a3f439e.js",
+      "_SectionTitle-e1930051.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/API/Partials/ApiTokenManager.vue"
+  },
+  "resources/js/Pages/Accounts/SubPages/CreateAccount.vue": {
+    "css": [
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/CreateAccount-e90793d9.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "_VehicleCard-28ce5e64.js",
+      "_AppCardHolder-797be531.js",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Accounts/SubPages/CreateAccount.vue"
+  },
+  "resources/js/Pages/Accounts/SubPages/EditAccount.vue": {
+    "css": [
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/EditAccount-711358e8.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "_VehicleCard-28ce5e64.js",
+      "_AppCardHolder-797be531.js",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Accounts/SubPages/EditAccount.vue"
+  },
+  "resources/js/Pages/Accounts/SubPages/ViewAccount.css": {
+    "file": "assets/ViewAccount-d2919c96.css",
+    "src": "resources/js/Pages/Accounts/SubPages/ViewAccount.css"
+  },
+  "resources/js/Pages/Accounts/SubPages/ViewAccount.vue": {
+    "css": [
+      "assets/ViewAccount-d2919c96.css",
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/ViewAccount-b93fdce9.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "_VehicleCard-28ce5e64.js",
+      "_AppCardHolder-797be531.js",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Accounts/SubPages/ViewAccount.vue"
+  },
+  "resources/js/Pages/Accounts/accounts.vue": {
+    "css": [
+      "assets/TripsListView-a23b9db7.css",
+      "assets/TripCard-04577768.css",
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/accounts-9f471521.js",
+    "imports": [
+      "resources/js/app.js",
+      "_TripsListView-a4bf4a70.js",
+      "_TripCard-a43d66ad.js",
+      "_AppCardHolder-797be531.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Accounts/accounts.vue"
+  },
+  "resources/js/Pages/Auth/ConfirmPassword.vue": {
+    "file": "assets/ConfirmPassword-12508d18.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCard-1373d4d3.js",
+      "_AuthenticationCardLogo-94d22354.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_TextInput-8a3f439e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/ConfirmPassword.vue"
+  },
+  "resources/js/Pages/Auth/ForgotPassword.vue": {
+    "file": "assets/ForgotPassword-6ce236eb.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCard-1373d4d3.js",
+      "_AuthenticationCardLogo-94d22354.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_TextInput-8a3f439e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/ForgotPassword.vue"
+  },
+  "resources/js/Pages/Auth/Login.vue": {
+    "file": "assets/Login-a56c4ef5.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCard-1373d4d3.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_TextInput-8a3f439e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/Login.vue"
+  },
+  "resources/js/Pages/Auth/Register.vue": {
+    "file": "assets/Register-b1c43da9.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCard-1373d4d3.js",
+      "_AuthenticationCardLogo-94d22354.js",
+      "_Checkbox-d48fcdaf.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_TextInput-8a3f439e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/Register.vue"
+  },
+  "resources/js/Pages/Auth/ResetPassword.vue": {
+    "file": "assets/ResetPassword-56ba60cd.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCard-1373d4d3.js",
+      "_AuthenticationCardLogo-94d22354.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_TextInput-8a3f439e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/ResetPassword.vue"
+  },
+  "resources/js/Pages/Auth/TwoFactorChallenge.vue": {
+    "file": "assets/TwoFactorChallenge-4a8eb2e9.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCard-1373d4d3.js",
+      "_AuthenticationCardLogo-94d22354.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_TextInput-8a3f439e.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/TwoFactorChallenge.vue"
+  },
+  "resources/js/Pages/Auth/VerifyEmail.vue": {
+    "file": "assets/VerifyEmail-eaec09d1.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCard-1373d4d3.js",
+      "_AuthenticationCardLogo-94d22354.js",
+      "_PrimaryButton-ccf1e96d.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Auth/VerifyEmail.vue"
+  },
+  "resources/js/Pages/Booking/Components/BookingFrom.vue": {
+    "file": "assets/BookingFrom-78e6966c.js",
+    "imports": [
+      "_lodash-b37a624c.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Booking/Components/BookingFrom.vue"
+  },
+  "resources/js/Pages/Booking/Components/DetailsComponent.vue": {
+    "file": "assets/DetailsComponent-88119923.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Booking/Components/DetailsComponent.vue"
+  },
+  "resources/js/Pages/Booking/Components/Payments.vue": {
+    "css": [
+      "assets/Payments-a3bd0ac5.css"
+    ],
+    "file": "assets/Payments-46cfbedd.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Booking/Components/Payments.vue"
+  },
+  "resources/js/Pages/Booking/SubPages/CreateBooking.vue": {
+    "file": "assets/CreateBooking-19e13662.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Booking/SubPages/CreateBooking.vue"
+  },
+  "resources/js/Pages/Booking/SubPages/EditBooking.vue": {
+    "file": "assets/EditBooking-fa39b56c.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Booking/SubPages/EditBooking.vue"
+  },
+  "resources/js/Pages/Booking/SubPages/ViewBooking.vue": {
+    "css": [
+      "assets/AppCardHolder-e96e3168.css",
+      "assets/Payments-a3bd0ac5.css"
+    ],
+    "file": "assets/ViewBooking-870c67df.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AppCardHolder-797be531.js",
+      "_VehicleCard-28ce5e64.js",
+      "_DriverCard-e746b9a0.js",
+      "resources/js/Pages/Booking/Components/DetailsComponent.vue",
+      "resources/js/Pages/Booking/Components/Payments.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Booking/SubPages/ViewBooking.vue"
+  },
+  "resources/js/Pages/Booking/booking.css": {
+    "file": "assets/booking-25db6c94.css",
+    "src": "resources/js/Pages/Booking/booking.css"
+  },
+  "resources/js/Pages/Booking/booking.vue": {
+    "css": [
+      "assets/booking-25db6c94.css",
+      "assets/TripCard-04577768.css",
+      "assets/TripsListView-a23b9db7.css"
+    ],
+    "file": "assets/booking-fe258de7.js",
+    "imports": [
+      "resources/js/app.js",
+      "_TripCard-a43d66ad.js",
+      "_TripsListView-a4bf4a70.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Booking/booking.vue"
+  },
+  "resources/js/Pages/Dashboard-copy.vue": {
+    "file": "assets/Dashboard-copy-10b9bd32.js",
+    "imports": [
+      "_AppLayout-4939d6ab.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Dashboard-copy.vue"
+  },
+  "resources/js/Pages/Dashboard/Dashboard.css": {
+    "file": "assets/Dashboard-34c8bafd.css",
+    "src": "resources/js/Pages/Dashboard/Dashboard.css"
+  },
+  "resources/js/Pages/Dashboard/Dashboard.vue": {
+    "css": [
+      "assets/Dashboard-34c8bafd.css",
+      "assets/TripsListView-a23b9db7.css",
+      "assets/TripCard-04577768.css"
+    ],
+    "file": "assets/Dashboard-e8823ac8.js",
+    "imports": [
+      "resources/js/Pages/Dashboard/MobileDashboardSummary.vue",
+      "_TripsListView-a4bf4a70.js",
+      "resources/js/app.js",
+      "_TripCard-a43d66ad.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Dashboard/Dashboard.vue"
+  },
+  "resources/js/Pages/Dashboard/MobileDashboardSummary.css": {
+    "file": "assets/MobileDashboardSummary-a37c3020.css",
+    "src": "resources/js/Pages/Dashboard/MobileDashboardSummary.css"
+  },
+  "resources/js/Pages/Dashboard/MobileDashboardSummary.vue": {
+    "css": [
+      "assets/MobileDashboardSummary-a37c3020.css"
+    ],
+    "file": "assets/MobileDashboardSummary-8032dbe1.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Dashboard/MobileDashboardSummary.vue"
+  },
+  "resources/js/Pages/Drivers/SubPages/CreateDriver.vue": {
+    "file": "assets/CreateDriver-af23ede6.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Vehicles/Components/VehicleFrom.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Drivers/SubPages/CreateDriver.vue"
+  },
+  "resources/js/Pages/Drivers/SubPages/EditDriver.vue": {
+    "file": "assets/EditDriver-82333bad.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Vehicles/Components/VehicleFrom.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Drivers/SubPages/EditDriver.vue"
+  },
+  "resources/js/Pages/Drivers/SubPages/ViewDriver.css": {
+    "file": "assets/ViewDriver-1ae44ae1.css",
+    "src": "resources/js/Pages/Drivers/SubPages/ViewDriver.css"
+  },
+  "resources/js/Pages/Drivers/SubPages/ViewDriver.vue": {
+    "css": [
+      "assets/ViewDriver-1ae44ae1.css",
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/ViewDriver-d5b84422.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AppCardHolder-797be531.js",
+      "_VehicleCard-28ce5e64.js",
+      "_DriverCard-e746b9a0.js",
+      "resources/js/Pages/Booking/Components/DetailsComponent.vue",
+      "resources/js/Pages/Vehicles/Components/Trips.vue",
+      "resources/js/Pages/Vehicles/Components/Mileage.vue",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Drivers/SubPages/ViewDriver.vue"
+  },
+  "resources/js/Pages/Drivers/drivers.css": {
+    "file": "assets/drivers-60b1385e.css",
+    "src": "resources/js/Pages/Drivers/drivers.css"
+  },
+  "resources/js/Pages/Drivers/drivers.vue": {
+    "css": [
+      "assets/drivers-60b1385e.css",
+      "assets/TripCard-04577768.css",
+      "assets/TripsListView-a23b9db7.css",
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/drivers-ebbe1430.js",
+    "imports": [
+      "resources/js/app.js",
+      "_TripCard-a43d66ad.js",
+      "_TripsListView-a4bf4a70.js",
+      "_VehicleCard-28ce5e64.js",
+      "_DriverCard-e746b9a0.js",
+      "_AppCardHolder-797be531.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Drivers/drivers.vue"
+  },
+  "resources/js/Pages/Finances/SubComponents/FuelForm.css": {
+    "file": "assets/FuelForm-5df82eb9.css",
+    "src": "resources/js/Pages/Finances/SubComponents/FuelForm.css"
+  },
+  "resources/js/Pages/Finances/SubComponents/FuelForm.vue": {
+    "css": [
+      "assets/FuelForm-5df82eb9.css"
+    ],
+    "file": "assets/FuelForm-6c86e35a.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Finances/SubComponents/FuelForm.vue"
+  },
+  "resources/js/Pages/Finances/SubComponents/OtherFees.css": {
+    "file": "assets/OtherFees-5e8cde10.css",
+    "src": "resources/js/Pages/Finances/SubComponents/OtherFees.css"
+  },
+  "resources/js/Pages/Finances/SubComponents/OtherFees.vue": {
+    "css": [
+      "assets/OtherFees-5e8cde10.css"
+    ],
+    "file": "assets/OtherFees-e7efaa5f.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Finances/SubComponents/OtherFees.vue"
+  },
+  "resources/js/Pages/Finances/SubComponents/Salary.css": {
+    "file": "assets/Salary-46021919.css",
+    "src": "resources/js/Pages/Finances/SubComponents/Salary.css"
+  },
+  "resources/js/Pages/Finances/SubComponents/Salary.vue": {
+    "css": [
+      "assets/Salary-46021919.css"
+    ],
+    "file": "assets/Salary-2f99edf8.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Finances/SubComponents/Salary.vue"
+  },
+  "resources/js/Pages/Finances/SubComponents/TripFee.css": {
+    "file": "assets/TripFee-532ee486.css",
+    "src": "resources/js/Pages/Finances/SubComponents/TripFee.css"
+  },
+  "resources/js/Pages/Finances/SubComponents/TripFee.vue": {
+    "css": [
+      "assets/TripFee-532ee486.css",
+      "assets/Payments-a3bd0ac5.css"
+    ],
+    "file": "assets/TripFee-106a2c7a.js",
+    "imports": [
+      "_InputError-c29abaa3.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Finances/SubComponents/TripFee.vue"
+  },
+  "resources/js/Pages/Finances/finances.css": {
+    "file": "assets/finances-a4563d8c.css",
+    "src": "resources/js/Pages/Finances/finances.css"
+  },
+  "resources/js/Pages/Finances/finances.vue": {
+    "css": [
+      "assets/finances-a4563d8c.css",
+      "assets/TripsListView-a23b9db7.css",
+      "assets/AppCardHolder-e96e3168.css",
+      "assets/Payments-a3bd0ac5.css"
+    ],
+    "file": "assets/finances-41cecdf7.js",
+    "imports": [
+      "resources/js/app.js",
+      "_TripsListView-a4bf4a70.js",
+      "resources/js/Pages/Notifications/Components/NotificationCard.vue",
+      "resources/js/Pages/Finances/SubComponents/TripFee.vue",
+      "resources/js/Pages/Finances/SubComponents/FuelForm.vue",
+      "resources/js/Pages/Finances/SubComponents/OtherFees.vue",
+      "resources/js/Pages/Finances/SubComponents/Salary.vue",
+      "_AppCardHolder-797be531.js",
+      "_InputError-c29abaa3.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Finances/finances.vue"
+  },
+  "resources/js/Pages/Notifications/Components/NotificationCard.css": {
+    "file": "assets/NotificationCard-59b01c5e.css",
+    "src": "resources/js/Pages/Notifications/Components/NotificationCard.css"
+  },
+  "resources/js/Pages/Notifications/Components/NotificationCard.vue": {
+    "css": [
+      "assets/NotificationCard-59b01c5e.css",
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/NotificationCard-e553d3a5.js",
+    "imports": [
+      "_AppCardHolder-797be531.js",
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Notifications/Components/NotificationCard.vue"
+  },
+  "resources/js/Pages/Notifications/SubPages/CreateNotifications.vue": {
+    "file": "assets/CreateNotifications-2fa5c478.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Notifications/SubPages/CreateNotifications.vue"
+  },
+  "resources/js/Pages/Notifications/SubPages/EditNotifications.vue": {
+    "file": "assets/EditNotifications-6199fe7b.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "_lodash-b37a624c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Notifications/SubPages/EditNotifications.vue"
+  },
+  "resources/js/Pages/Notifications/SubPages/ViewNotifications.vue": {
+    "css": [
+      "assets/AppCardHolder-e96e3168.css",
+      "assets/Payments-a3bd0ac5.css"
+    ],
+    "file": "assets/ViewNotifications-e1014157.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AppCardHolder-797be531.js",
+      "_VehicleCard-28ce5e64.js",
+      "_DriverCard-e746b9a0.js",
+      "resources/js/Pages/Booking/Components/DetailsComponent.vue",
+      "resources/js/Pages/Booking/Components/Payments.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Notifications/SubPages/ViewNotifications.vue"
+  },
+  "resources/js/Pages/Notifications/notifications.vue": {
+    "css": [
+      "assets/TripsListView-a23b9db7.css",
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/notifications-498c66b6.js",
+    "imports": [
+      "resources/js/app.js",
+      "_TripsListView-a4bf4a70.js",
+      "resources/js/Pages/Notifications/Components/NotificationCard.vue",
+      "_AppCardHolder-797be531.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Notifications/notifications.vue"
+  },
+  "resources/js/Pages/PrivacyPolicy.vue": {
+    "file": "assets/PrivacyPolicy-8c6f93d8.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCardLogo-94d22354.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/PrivacyPolicy.vue"
+  },
+  "resources/js/Pages/Profile/Partials/DeleteUserForm.vue": {
+    "file": "assets/DeleteUserForm-3eb0862a.js",
+    "imports": [
+      "resources/js/app.js",
+      "_DialogModal-833e6566.js",
+      "_DangerButton-18c99615.js",
+      "_InputError-c29abaa3.js",
+      "_SecondaryButton-76b1d001.js",
+      "_TextInput-8a3f439e.js",
+      "_SectionTitle-e1930051.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.vue"
+  },
+  "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue": {
+    "file": "assets/LogoutOtherBrowserSessionsForm-d277ed4c.js",
+    "imports": [
+      "resources/js/app.js",
+      "_ActionMessage-58bfec5a.js",
+      "_DialogModal-833e6566.js",
+      "_InputError-c29abaa3.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_SecondaryButton-76b1d001.js",
+      "_TextInput-8a3f439e.js",
+      "_SectionTitle-e1930051.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue"
+  },
+  "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue": {
+    "file": "assets/TwoFactorAuthenticationForm-185779ca.js",
+    "imports": [
+      "resources/js/app.js",
+      "_DialogModal-833e6566.js",
+      "_InputError-c29abaa3.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_SecondaryButton-76b1d001.js",
+      "_TextInput-8a3f439e.js",
+      "_DangerButton-18c99615.js",
+      "_InputLabel-dd70809d.js",
+      "_SectionTitle-e1930051.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue"
+  },
+  "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue": {
+    "file": "assets/UpdatePasswordForm-7960be0a.js",
+    "imports": [
+      "resources/js/app.js",
+      "_ActionMessage-58bfec5a.js",
+      "_FormSection-70496723.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_TextInput-8a3f439e.js",
+      "_SectionTitle-e1930051.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue"
+  },
+  "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue": {
+    "file": "assets/UpdateProfileInformationForm-e758e672.js",
+    "imports": [
+      "resources/js/app.js",
+      "_ActionMessage-58bfec5a.js",
+      "_FormSection-70496723.js",
+      "_InputError-c29abaa3.js",
+      "_InputLabel-dd70809d.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_SecondaryButton-76b1d001.js",
+      "_TextInput-8a3f439e.js",
+      "_SectionTitle-e1930051.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue"
+  },
+  "resources/js/Pages/Profile/Show.vue": {
+    "file": "assets/Show-21686434.js",
+    "imports": [
+      "_AppLayout-4939d6ab.js",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
+      "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue",
+      "_SectionBorder-8e61384f.js",
+      "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
+      "resources/js/app.js",
+      "_DialogModal-833e6566.js",
+      "_SectionTitle-e1930051.js",
+      "_DangerButton-18c99615.js",
+      "_InputError-c29abaa3.js",
+      "_SecondaryButton-76b1d001.js",
+      "_TextInput-8a3f439e.js",
+      "_ActionMessage-58bfec5a.js",
+      "_PrimaryButton-ccf1e96d.js",
+      "_InputLabel-dd70809d.js",
+      "_FormSection-70496723.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Profile/Show.vue"
+  },
+  "resources/js/Pages/TermsOfService.vue": {
+    "file": "assets/TermsOfService-877401ee.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AuthenticationCardLogo-94d22354.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/TermsOfService.vue"
+  },
+  "resources/js/Pages/Trips/Components/DetailsComponent.vue": {
+    "file": "assets/DetailsComponent-073369a2.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Trips/Components/DetailsComponent.vue"
+  },
+  "resources/js/Pages/Trips/Components/Mileage.css": {
+    "file": "assets/Mileage-19735110.css",
+    "src": "resources/js/Pages/Trips/Components/Mileage.css"
+  },
+  "resources/js/Pages/Trips/Components/Mileage.vue": {
+    "css": [
+      "assets/Mileage-19735110.css"
+    ],
+    "file": "assets/Mileage-2e774b59.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Trips/Components/Mileage.vue"
+  },
+  "resources/js/Pages/Trips/Components/MileageEntry.css": {
+    "file": "assets/MileageEntry-c1efa0ac.css",
+    "src": "resources/js/Pages/Trips/Components/MileageEntry.css"
+  },
+  "resources/js/Pages/Trips/Components/MileageEntry.vue": {
+    "css": [
+      "assets/MileageEntry-c1efa0ac.css"
+    ],
+    "file": "assets/MileageEntry-9699ecd7.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Trips/Components/MileageEntry.vue"
+  },
+  "resources/js/Pages/Trips/SubPages/ViewTrips.vue": {
+    "css": [
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/ViewTrips-5b273eb9.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AppCardHolder-797be531.js",
+      "_VehicleCard-28ce5e64.js",
+      "_DriverCard-e746b9a0.js",
+      "resources/js/Pages/Trips/Components/Mileage.vue",
+      "resources/js/Pages/Trips/Components/MileageEntry.vue",
+      "resources/js/Pages/Booking/Components/DetailsComponent.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Trips/SubPages/ViewTrips.vue"
+  },
+  "resources/js/Pages/Trips/trips.css": {
+    "file": "assets/trips-1e3be7be.css",
+    "src": "resources/js/Pages/Trips/trips.css"
+  },
+  "resources/js/Pages/Trips/trips.vue": {
+    "css": [
+      "assets/trips-1e3be7be.css",
+      "assets/TripCard-04577768.css",
+      "assets/TripsListView-a23b9db7.css"
+    ],
+    "file": "assets/trips-a2d7ddd5.js",
+    "imports": [
+      "resources/js/app.js",
+      "_TripCard-a43d66ad.js",
+      "_TripsListView-a4bf4a70.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Trips/trips.vue"
+  },
+  "resources/js/Pages/Vehicles/Components/Mileage.css": {
+    "file": "assets/Mileage-c4dbae57.css",
+    "src": "resources/js/Pages/Vehicles/Components/Mileage.css"
+  },
+  "resources/js/Pages/Vehicles/Components/Mileage.vue": {
+    "css": [
+      "assets/Mileage-c4dbae57.css"
+    ],
+    "file": "assets/Mileage-d840db8e.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Vehicles/Components/Mileage.vue"
+  },
+  "resources/js/Pages/Vehicles/Components/Trips.css": {
+    "file": "assets/Trips-7b9b58c3.css",
+    "src": "resources/js/Pages/Vehicles/Components/Trips.css"
+  },
+  "resources/js/Pages/Vehicles/Components/Trips.vue": {
+    "css": [
+      "assets/Trips-7b9b58c3.css"
+    ],
+    "file": "assets/Trips-4eda30fc.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Vehicles/Components/Trips.vue"
+  },
+  "resources/js/Pages/Vehicles/Components/VehicleFrom.vue": {
+    "file": "assets/VehicleFrom-41e5ee4e.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Vehicles/Components/VehicleFrom.vue"
+  },
+  "resources/js/Pages/Vehicles/SubPages/CreateVehicle.vue": {
+    "file": "assets/CreateVehicle-23e5ab84.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Vehicles/Components/VehicleFrom.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Vehicles/SubPages/CreateVehicle.vue"
+  },
+  "resources/js/Pages/Vehicles/SubPages/EditVehicle.vue": {
+    "css": [
+      "assets/TripCard-04577768.css",
+      "assets/TripsListView-a23b9db7.css",
+      "assets/AppCardHolder-e96e3168.css",
+      "assets/vehicle-7977b63a.css"
+    ],
+    "file": "assets/EditVehicle-0db73009.js",
+    "imports": [
+      "resources/js/app.js",
+      "resources/js/Pages/Vehicles/Components/VehicleFrom.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Vehicles/SubPages/EditVehicle.vue"
+  },
+  "resources/js/Pages/Vehicles/SubPages/ViewVehicle.vue": {
+    "css": [
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/ViewVehicle-755a87ab.js",
+    "imports": [
+      "resources/js/app.js",
+      "_AppCardHolder-797be531.js",
+      "_VehicleCard-28ce5e64.js",
+      "_DriverCard-e746b9a0.js",
+      "resources/js/Pages/Booking/Components/DetailsComponent.vue",
+      "resources/js/Pages/Vehicles/Components/Trips.vue",
+      "resources/js/Pages/Vehicles/Components/Mileage.vue"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Vehicles/SubPages/ViewVehicle.vue"
+  },
+  "resources/js/Pages/Vehicles/vehicle.vue": {
+    "css": [
+      "assets/vehicle-7977b63a.css",
+      "assets/TripCard-04577768.css",
+      "assets/TripsListView-a23b9db7.css",
+      "assets/AppCardHolder-e96e3168.css"
+    ],
+    "file": "assets/vehicle-d3b32a79.js",
+    "imports": [
+      "resources/js/app.js",
+      "_TripCard-a43d66ad.js",
+      "_TripsListView-a4bf4a70.js",
+      "_VehicleCard-28ce5e64.js",
+      "_AppCardHolder-797be531.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Vehicles/vehicle.vue"
+  },
+  "resources/js/Pages/Welcome-copy.css": {
+    "file": "assets/Welcome-copy-665689a9.css",
+    "src": "resources/js/Pages/Welcome-copy.css"
+  },
+  "resources/js/Pages/Welcome-copy.vue": {
+    "css": [
+      "assets/Welcome-copy-665689a9.css"
+    ],
+    "file": "assets/Welcome-copy-cb7712da.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Welcome-copy.vue"
+  },
+  "resources/js/Pages/Welcome.css": {
+    "file": "assets/Welcome-3c7a7fed.css",
+    "src": "resources/js/Pages/Welcome.css"
+  },
+  "resources/js/Pages/Welcome.vue": {
+    "css": [
+      "assets/Welcome-3c7a7fed.css"
+    ],
+    "file": "assets/Welcome-def882b2.js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/Pages/Welcome.vue"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-7ab514b4.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "css": [
+      "assets/app-7ab514b4.css"
+    ],
+    "dynamicImports": [
+      "resources/js/Pages/API/Index.vue",
+      "resources/js/Pages/API/Partials/ApiTokenManager.vue",
+      "resources/js/Pages/Accounts/SubPages/CreateAccount.vue",
+      "resources/js/Pages/Accounts/SubPages/EditAccount.vue",
+      "resources/js/Pages/Accounts/SubPages/ViewAccount.vue",
+      "resources/js/Pages/Accounts/accounts.vue",
+      "resources/js/Pages/Auth/ConfirmPassword.vue",
+      "resources/js/Pages/Auth/ForgotPassword.vue",
+      "resources/js/Pages/Auth/Login.vue",
+      "resources/js/Pages/Auth/Register.vue",
+      "resources/js/Pages/Auth/ResetPassword.vue",
+      "resources/js/Pages/Auth/TwoFactorChallenge.vue",
+      "resources/js/Pages/Auth/VerifyEmail.vue",
+      "resources/js/Pages/Booking/Components/BookingFrom.vue",
+      "resources/js/Pages/Booking/Components/DetailsComponent.vue",
+      "resources/js/Pages/Booking/Components/Payments.vue",
+      "resources/js/Pages/Booking/SubPages/CreateBooking.vue",
+      "resources/js/Pages/Booking/SubPages/EditBooking.vue",
+      "resources/js/Pages/Booking/SubPages/ViewBooking.vue",
+      "resources/js/Pages/Booking/booking.vue",
+      "resources/js/Pages/Dashboard-copy.vue",
+      "resources/js/Pages/Dashboard/Dashboard.vue",
+      "resources/js/Pages/Dashboard/MobileDashboardSummary.vue",
+      "resources/js/Pages/Drivers/SubPages/CreateDriver.vue",
+      "resources/js/Pages/Drivers/SubPages/EditDriver.vue",
+      "resources/js/Pages/Drivers/SubPages/ViewDriver.vue",
+      "resources/js/Pages/Drivers/drivers.vue",
+      "resources/js/Pages/Finances/SubComponents/FuelForm.vue",
+      "resources/js/Pages/Finances/SubComponents/OtherFees.vue",
+      "resources/js/Pages/Finances/SubComponents/Salary.vue",
+      "resources/js/Pages/Finances/SubComponents/TripFee.vue",
+      "resources/js/Pages/Finances/finances.vue",
+      "resources/js/Pages/Notifications/Components/NotificationCard.vue",
+      "resources/js/Pages/Notifications/SubPages/CreateNotifications.vue",
+      "resources/js/Pages/Notifications/SubPages/EditNotifications.vue",
+      "resources/js/Pages/Notifications/SubPages/ViewNotifications.vue",
+      "resources/js/Pages/Notifications/notifications.vue",
+      "resources/js/Pages/PrivacyPolicy.vue",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.vue",
+      "resources/js/Pages/Profile/Partials/LogoutOtherBrowserSessionsForm.vue",
+      "resources/js/Pages/Profile/Partials/TwoFactorAuthenticationForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.vue",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.vue",
+      "resources/js/Pages/Profile/Show.vue",
+      "resources/js/Pages/TermsOfService.vue",
+      "resources/js/Pages/Trips/Components/DetailsComponent.vue",
+      "resources/js/Pages/Trips/Components/Mileage.vue",
+      "resources/js/Pages/Trips/Components/MileageEntry.vue",
+      "resources/js/Pages/Trips/SubPages/ViewTrips.vue",
+      "resources/js/Pages/Trips/trips.vue",
+      "resources/js/Pages/Vehicles/Components/Mileage.vue",
+      "resources/js/Pages/Vehicles/Components/Trips.vue",
+      "resources/js/Pages/Vehicles/Components/VehicleFrom.vue",
+      "resources/js/Pages/Vehicles/SubPages/CreateVehicle.vue",
+      "resources/js/Pages/Vehicles/SubPages/EditVehicle.vue",
+      "resources/js/Pages/Vehicles/SubPages/ViewVehicle.vue",
+      "resources/js/Pages/Vehicles/vehicle.vue",
+      "resources/js/Pages/Welcome-copy.vue",
+      "resources/js/Pages/Welcome.vue"
+    ],
+    "file": "assets/app-0b3af78b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "vehicle.css": {
+    "file": "assets/vehicle-7977b63a.css",
+    "src": "vehicle.css"
+  }
+}
