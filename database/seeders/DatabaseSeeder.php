@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Designation;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +14,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            DesignationSeeder::class
+        ]);
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $Admin = User::create([
+            'first_name'=>"Admin",
+            'last_name'=>"Admin",
+            'email'=>"admin@email.local",
+            'phone'=>"0000000000",
+            'password'=>bcrypt("password"),
+            'national_id'=>"00000000"
+        ]);
+
+        $admin_designation = Designation::where('name','Administrator')->first();
+
+        $Admin->designation()->attach($admin_designation);
     }
 }

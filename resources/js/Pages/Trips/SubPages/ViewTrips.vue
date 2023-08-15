@@ -1,20 +1,19 @@
 <template>
     <section class="p-[10px]">
         <div class="heading my-[10px] md:my-[0px]">
-            <h1>Booking : {{ 'XXXXXXXXXXX' }}</h1>
+            <h1>Trip : {{ trips.id }}</h1>
         </div>
         <div class="flex mb-[20px] py-[10px]">
             <ul class="flex gap-3">
-                <Link as="button" href="'/'" class="px-[10px] button-fill-blue ">Edit</Link>
-                <Link as="button" href="'/'" class="px-[10px] border-red-400 text-gray-50 bg-red-400">Delete</Link>
+                <Link as="button" method="delete" :href="route('trips.deleteTrip',[trips.id])" class="px-[10px] border-red-400 text-gray-50 bg-red-400">Delete</Link>
             </ul>
         </div>
 
         <section class="flex flex-wrap md:gap-[20px]">
             <article class="sm:w-[100%] md:w-[300px]">
-                <ClientCard :app_defaults="app_defaults">
+                <ClientCard :app_defaults="app_defaults" :booking="trips.booking" >
                 </ClientCard>
-                <DriverCard :app_defaults="app_defaults">
+                <DriverCard :driver="trips.driver"  :app_defaults="app_defaults">
                     <ul class="">
                         <li class="flex small-text my-[5px]">
                             <label class=" w-[120px] font-semibold text-gray-500">Total Trips:</label>
@@ -30,7 +29,7 @@
                         </li>
                     </ul>
                 </DriverCard>
-                <VehicleCard :app_defaults="app_defaults"/>
+                <VehicleCard :vehicle="trips.vehicle" :app_defaults="app_defaults"/>
             </article>
             <article class="w-[100%] md:w-[calc(100%-320px)]">
                 <AppCardHolder :title="'Trip Details'" :pill="'Active'" class="w-[100%]">
@@ -45,9 +44,9 @@
                                 @click.prevent.stop="active_tab = 'MileageEntry' ">Update Mileage</button>
                     </ul>
                     <div class="w-[100%]">
-                        <DetailsComponent class="w-[100%]" v-if="active_tab === 'Details'"/>
-                        <Mileage class="w-[100%]" v-if="active_tab === 'Mileage'"/>
-                        <MileageEntry class="w-[100%]" v-if="active_tab === 'MileageEntry'"/>
+                        <DetailsComponent class="w-[100%]" :booking="trips.booking" v-if="active_tab === 'Details'"/>
+                        <Mileage v-on:editMileageEntry="editMileageEntry" class="w-[100%]" v-if="active_tab === 'Mileage' && trips && trips.mileage" :mileage="trips.mileage" />
+                        <MileageEntry v-on:saveEntry="saveEntry" v-on:updateEntry="updateEntry" :mileage="mileage" class="w-[100%]" v-if="active_tab === 'MileageEntry'"/>
                     </div>
                 </AppCardHolder>
             </article>
@@ -61,11 +60,13 @@ import {app_defaults} from "@/appDefaults/config.js";
 import VehicleCard from "@/appComponents/VehicleCard.vue";
 import DriverCard from "@/appComponents/DriverCard.vue";
 import Mileage from "@/Pages/Trips/Components/Mileage.vue";
-import DetailsComponent from "@/Pages/Trips/Components/DetailsComponent.vue";
 import ClientCard from "@/appComponents/ClientCard.vue";
 import MileageEntry from "@/Pages/Trips/Components/MileageEntry.vue";
+import DetailsComponent from "@/Pages/Booking/Components/DetailsComponent.vue";
+import {useForm} from "@inertiajs/vue3";
 
 export default {
+    props:['trips'],
     computed: {
         app_defaults() {
             return app_defaults
@@ -83,8 +84,51 @@ export default {
     layout: DashboardLayout,
     data() {
         return {
-            active_tab: 'Details'
+            mileage:useForm({
+                id:null,
+                current_reading:null,
+                mileage_at:null,
+                date_created: null
+            }),
+            active_tab: 'Mileage'
         }
+    },
+    methods:{
+        saveEntry(){
+            this.mileage.post(route('trips.postMileage',[this.trips.id]), {
+                onSuccess: () => {
+                    this.active_tab = 'Mileage'
+                }
+            })
+        },
+        updateEntry(){
+            console.log("here")
+            this.mileage.put(route('trips.putMileage',[this.mileage.id]), {
+                onSuccess: () => {
+                    this.active_tab = 'Mileage'
+                }
+            })
+        },
+        editMileageEntry(data){
+            this.mileage.id = data.data.id
+            this.mileage.current_reading = data.data.reading
+            this.mileage.mileage_at = data.data.mileage_at
+            this.mileage.date_created = this.dateFormat(data.data.created_at)
+            this.active_tab = 'MileageEntry'
+        },
+        dateFormat(data) {
+            const parsedDateTime = new Date(data);
+
+            function padNumberWithZeros(num, length) {
+                return num.toString().padStart(length, '0');
+            }
+
+            return `${parsedDateTime.getFullYear()}-${padNumberWithZeros(parsedDateTime.getMonth() + 1, 2)}-${padNumberWithZeros(parsedDateTime.getDate(), 2)}T${padNumberWithZeros(parsedDateTime.getHours(), 2)}:${padNumberWithZeros(parsedDateTime.getMinutes(), 2)}`;
+
+        }
+    },
+    mounted() {
+        this.active_tab = 'Mileage'
     }
 }
 </script>

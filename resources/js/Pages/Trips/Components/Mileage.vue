@@ -12,7 +12,7 @@
                 <th scope="col" class="px-1 py-3">
                     Mileage at
                 </th>
-                <th scope="col" class="px-1 py-3">
+                <th scope="col" class=" hidden md:table-cell px-1 py-3">
                     Date
                 </th>
                 <th scope="col" class="px-1 py-3">
@@ -20,36 +20,41 @@
             </tr>
             </thead>
             <tbody>
-            <Link :href="route('booking.ViewBooking',[1])" as="tr" class="bg-white small-text py-[10px] border-b"
-                  v-for="item in 10">
+            <tr class="bg-white small-text py-[10px] border-b" v-for="(item,index) in mileage">
                 <td class="px-1">
                     <p class="py-2">
-                        300,000
+                        {{ item.reading }}
                     </p>
                 </td>
                 <td class="px-1">
                     <p class="py-2">
-                        Trip Start
+                        {{ mileage[index-1] ? mileage[index-1].reading : 'N/A' }}
+                    </p>
+                </td>
+                <td class=" hidden md:table-cell px-1">
+                    <p class="py-2">
+                        Trip {{ item.mileage_at }}
                     </p>
                 </td>
                 <td class="px-1">
                     <p class="py-2">
-                        5/12/2023
+                        {{ new Date(item.created_at).toLocaleDateString(undefined, app_defaults.timeOption)  }}
                     </p>
                 </td>
                 <td class="px-1 w-[40px]">
                     <div class="flex gap-2">
-                        <button class="px-[3px] button-fill-blue">Edit</button>
-                        <button class="px-[3px] button-fill-blue">delete</button>
+                        <button @click.prevent.stop="editMileageEntry(item)"  class="px-[3px] button-fill-blue">Edit</button>
+                        <button @click.prevent.stop="deleteMileageEntry(item.id)"  class="px-[3px] hover:bg-red-600 border-none active:border-red-400 bg-red-400 text-white">delete</button>
                     </div>
                 </td>
-            </Link>
+            </tr>
             </tbody>
         </table>
     </div>
 </template>
 <script>
 import {app_defaults} from "@/appDefaults/config.js";
+import {router} from "@inertiajs/vue3";
 
 export default {
     name: 'Mileage',
@@ -58,7 +63,20 @@ export default {
             return app_defaults
         }
     },
-    props: ['type']
+    props: ['type','mileage'],
+    methods:{
+        viewMileageEntry(id){
+            console.log("hi")
+        },
+        editMileageEntry(item){
+            this.$emit('editMileageEntry', {
+                data:item
+            })
+        },
+        deleteMileageEntry(id){
+            router.delete(route('trips.deleteMileage',[id]))
+        }
+    },
 }
 </script>
 

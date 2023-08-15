@@ -1,5 +1,6 @@
 <template>
     <section class="block lg:hidden">
+        <h1 class="p-[20px]">Trips</h1>
         <div class="flex h-[50px] mb-[20px] p-[20px] items-center justify-center">
             <input class="w-[100%]" type="search" placeholder="Search ny booking ID">
         </div>
@@ -65,9 +66,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <Link :href="route('trips.ViewTrips',[1])" as="tr" class="bg-white border-b" v-for="item in 10">
+                <Link :href="route('trips.ViewTrips',[item.id])" as="tr" class="bg-white border-b" v-for="item in trips">
                     <th scope="row" class="px-6 small-text font-medium text-gray-900 whitespace-nowrap">
-                        000000000
+                        {{ item.id }}
                     </th>
                     <td class="px-6 small-text font-extrabold">
                         Brian Kimani
@@ -141,6 +142,7 @@ import TripCard from "@/appComponents/TripCard.vue";
 import TripsListView from "@/appComponents/TripsListView.vue";
 
 export default {
+    props:['trips'],
     components: {TripsListView, TripCard},
     layout:DashboardLayout
 }

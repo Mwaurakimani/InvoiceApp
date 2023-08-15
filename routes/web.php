@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-include "AppRoutes/index.php";
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,4 +28,18 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard/Dashboard');
     })->name('dashboard');
+
+    include "AppRoutes/index.php";
+});
+
+Route::get('/action',function (){
+    $Dess = collect(['Administrator','Moderator','Driver','Client']);
+
+    $Dess->map(function ($item){
+        $des = new \App\Models\Designation();
+
+        $des->name = $item;
+        $des->save();
+    });
+
 });

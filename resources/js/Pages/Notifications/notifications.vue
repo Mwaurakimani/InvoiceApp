@@ -1,5 +1,6 @@
 <template>
     <section class="block lg:hidden">
+        <h1 class="p-[20px]">Notifications</h1>
         <div class="flex h-[50px] mb-[20px] p-[20px] items-center justify-center">
             <input class="w-[100%]" type="search" placeholder="Search...">
         </div>
@@ -39,8 +40,8 @@
                 <input type="search" placeholder="Search...">
             </div>
         </div>
-        <TripsListView class="p-[10px] mb-[20px]">
-            <NotificationCard/>
+        <TripsListView v-slot="data" :dataset="notifications" class="p-[10px] mb-[20px]">
+            <NotificationCard :item="data"/>
         </TripsListView>
 
         <div class="flex mb-[30px] w-[100%] justify-center">
@@ -68,6 +69,7 @@ import NotificationCard from "@/Pages/Notifications/Components/NotificationCard.
 
 export default {
     name: "notifications",
+    props:['notifications'],
     components: {NotificationCard, TripsListView},
     layout:DashboardLayout
 }

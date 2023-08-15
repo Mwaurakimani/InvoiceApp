@@ -8,21 +8,17 @@
                 <Link as="button" :href="route('notifications.ListNotifications')" class="px-[10px] button-fill-blue">
                     Notifications
                 </Link>
-                <Link as="button" :href="route('notifications.EditNotification',[1])" class="px-[10px] button-fill-blue ">Edit Notification</Link>
+                <Link as="button" method="delete" :href="route('notifications.DeleteNotification',[notification.id])" class="px-[10px] border-none bg-red-400 hover:bg-red-500 text-white">Delete Notification</Link>
             </ul>
         </div>
     </section>
     <section class="px-[10px]">
-        <AppCardHolder :title="'Title'" class="">
-            <div class="flex mb-[10px]">
-                <label class="w-[50px]">From :</label>
-                <p>Username</p>
-            </div>
-            <p class="small-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ex rerum
-                voluptatem. At ducimus facilis, itaque laudantium natus optio perferendis, quas quasi quidem saepe sequi
-                voluptatum. Dolorem facere fugiat rem?
-            </p>
+        <AppCardHolder :title="notification.title" class="">
+<!--            <div class="flex mb-[10px]">-->
+<!--                <label class="w-[50px]">From :</label>-->
+<!--                <p>Username</p>-->
+<!--            </div>-->
+            <p class="small-text">{{ notification.message }}</p>
         </AppCardHolder>
     </section>
 </template>
@@ -41,6 +37,7 @@ export default {
             return app_defaults
         }
     },
+    props:['notification'],
     components: {Payment, DetailsComponent, DriverCard, VehicleCard, AppCardHolder},
     layout: DashboardLayout,
     data() {

@@ -4,13 +4,13 @@
             <h6 class="">{{ title }}</h6>
             <div v-if="pill" class="pill"><p>{{ pill }}</p></div>
         </div>
-        <slot></slot>
+        <slot :data="data" ></slot>
     </div>
 </template>
 <script>
 export default {
     name: 'AppCardHolder',
-    props: ['title', 'pill']
+    props: ['title', 'pill','data']
 }
 </script>
 <style scoped lang="scss">

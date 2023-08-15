@@ -12,34 +12,25 @@
                 <th scope="col" class="px-1 py-3">
                     Date
                 </th>
-                <th v-if="custom != 'undefined' && custom.disable_edit == false" scope="col" class="px-1 py-3">
-                    Action
-                </th>
             </tr>
             </thead>
             <tbody>
             <Link :href="route('booking.ViewBooking',[1])" as="tr" class="bg-white small-text py-[10px] border-b"
-                  v-for="item in 10">
+                  v-for="item in mileages">
                 <td class="px-1">
                     <p class="py-2">
-                        300,000
+                        {{ item.reading }}
                     </p>
                 </td>
                 <td class="px-1">
                     <p class="py-2">
-                        Trip Start
+                        {{item.mileage_at}}
                     </p>
                 </td>
                 <td class="px-1">
                     <p class="py-2">
-                        5/12/2023
+                        {{ item.created_at }}
                     </p>
-                </td>
-                <td v-if="custom != 'undefined' && custom.disable_edit == false" class="px-1 w-[40px]">
-                    <div class="flex gap-2">
-                        <button class="px-[3px] button-fill-blue">Edit</button>
-                        <button class="px-[3px] button-fill-blue">delete</button>
-                    </div>
                 </td>
             </Link>
             </tbody>
@@ -56,7 +47,7 @@ export default {
             return app_defaults
         }
     },
-    props: ['type','custom']
+    props: ['type','custom','mileages']
 }
 </script>
 

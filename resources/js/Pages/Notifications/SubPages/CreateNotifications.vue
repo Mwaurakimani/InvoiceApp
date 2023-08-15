@@ -6,7 +6,7 @@
         <div class="flex mb-[20px] py-[10px]">
             <ul class="flex gap-3">
                 <Link as="button" :href="route('notifications.ListNotifications')" class="px-[10px] button-fill-blue" >Notifications</Link>
-                <Link as="button" href="'/'" class="px-[10px] button-fill-blue " >Save Notification</Link>
+                <button @click.prevent.stop="saveNotification" as="button" href="'/'" class="px-[10px] button-fill-blue " >Save Notification</button>
             </ul>
         </div>
     </section>
@@ -14,10 +14,12 @@
         <form @submit.prevent class="mb-[20px] p-[10px] app-card md:w-[100%] lg:w-[48%]">
             <h5>Notification Details</h5>
             <div class="input-group-default">
-                <input type="text" placeholder="Title">
+                <input v-model="notificationForm.title" type="text" placeholder="Title">
+                <span class="text-red-500">{{ $page.props.errors.title }}</span>
             </div>
             <div class="input-group-default">
-                <textarea class="h-[100px]" placeholder="Notification" ></textarea>
+                <textarea v-model="notificationForm.message" class="h-[100px]" placeholder="Notification" ></textarea>
+                <span class="text-red-500">{{ $page.props.errors.message }}</span>
             </div>
         </form>
     </section>
@@ -26,12 +28,12 @@
 import DashboardLayout from "@/Layouts/DashboardLayout.vue";
 import {app_defaults} from "@/appDefaults/config.js";
 import BookingFrom from "@/Pages/Booking/Components/BookingFrom.vue";
-import {router} from "@inertiajs/vue3";
+import {router, useForm} from "@inertiajs/vue3";
 
 export default {
     methods: {
-        router() {
-            return router
+        saveNotification(){
+            this.notificationForm.post(route('notifications.saveNotification'))
         }
     },
     computed: {
@@ -43,7 +45,11 @@ export default {
     layout:DashboardLayout,
     data(){
         return{
-            active_tab:'Details'
+            active_tab:'Details',
+            notificationForm:useForm({
+                title:null,
+                message:null
+            })
         }
     }
 }

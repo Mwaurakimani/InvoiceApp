@@ -1,42 +1,53 @@
 <template>
-  <Link as="div" :href="route('booking.ViewBooking',[1])" class="trip-holder app-card">
-      <p class="trip-id">00000000</p>
-      <div class="pill"><p>Active</p></div>
-      <div class="driver">Brian Kimani</div>
-      <ul class="card-body flex">
-          <li class="flex">
-              <label>From:</label>
-              <p>RidgeWays</p>
-          </li>
-          <li class="flex">
-              <label>To:</label>
-              <p>RidgeWays</p>
-          </li>
-          <li class="flex">
-              <label>Date:</label>
-              <p>Mon Jan 3 , 2023</p>
-          </li>
-          <li class="flex">
-              <label>Return:</label>
-              <p>Mon Jan 3 , 2023</p>
-          </li>
-      </ul>
-      <p class="cash">Ksh 8,000</p>
-  </Link>
+    <Link as="div" :href="route('booking.ViewBooking',[1])" class="trip-holder app-card">
+        <p class="trip-id">ID: {{ trip.id }}</p>
+        <div class="pill"><p>Active</p></div>
+        <div class="driver">Client Name:{{ trip.clientName }}</div>
+        <ul class="card-body small-text flex">
+            <li class="flex">
+                <label>From:</label>
+                <p>{{ trip.pickUpLocation }}</p>
+            </li>
+            <li class="flex">
+                <label>To:</label>
+                <p>{{ trip.destination }}</p>
+            </li>
+            <li class="flex">
+                <label>Date:</label>
+                <p>{{ trip.pickUpTime }}</p>
+            </li>
+            <li class="flex">
+                <label>Return:</label>
+                <p>{{ trip.returnTime }}</p>
+            </li>
+        </ul>
+        <p class="cash">{{currency.format(trip.price)}}</p>
+    </Link>
 </template>
 <script>
 export default {
-  name: 'TripCard'
+    setup(){
+        let currency = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'Ksh',
+        });
+
+        return {
+            currency
+        }
+    },
+    name: 'TripCard',
+    props: ['trip'],
 }
 </script>
 
-<style lang="scss" scoped >
+<style lang="scss" scoped>
 @import "../../scss/defaults";
 
-.trip-holder{
+.trip-holder {
     padding: 10px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 30px 30px 120px 30px;
     grid-template-areas:
     "head head pill pill"
@@ -44,14 +55,16 @@ export default {
     "body body body body"
     "empty cash cash cash";
 
-    .trip-id{
+    .trip-id {
         grid-area: head;
     }
-    .pill{
-        grid-area: pill ;
+
+    .pill {
+        grid-area: pill;
         display: flex;
         justify-content: right;
-        p{
+
+        p {
             background-color: #3ed77c;
             color: white;
             display: flex;
@@ -62,32 +75,33 @@ export default {
             @extend .small-text;
         }
     }
-    .driver{
-        grid-area: driver ;
+
+    .driver {
+        grid-area: driver;
         color: dodgerblue;
         @extend .small-text;
         font-weight: bolder;
 
     }
-    .card-body{
-        grid-area: body ;
+
+    .card-body {
+        grid-area: body;
         flex-direction: column;
         padding-left: 20px;
 
-        label{
+        label {
             width: 100px;
             color: dodgerblue;
         }
     }
-    .cash{
-        grid-area: cash ;
+
+    .cash {
+        grid-area: cash;
         display: grid;
         justify-content: right;
         font-weight: bolder;
     }
 }
-
-
 
 
 </style>

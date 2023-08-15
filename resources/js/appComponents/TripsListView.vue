@@ -1,7 +1,7 @@
 <template>
     <ul>
-        <li style="width: 100%" v-for="(item,index) in 20" :key="index">
-            <slot></slot>
+        <li style="width: 100%" v-for="(item,index) in dataset" :key="index">
+            <slot :item="item"></slot>
         </li>
     </ul>
 </template>
@@ -10,6 +10,7 @@
 
 export default {
     name: 'TripsListView',
+    props:['dataset']
 }
 </script>
 

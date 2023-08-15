@@ -1,6 +1,7 @@
 <template>
   <Link as="li" v-for="navLink in navLinks" :href="navLink.path">
-    <p class="w-[100%] h-[100%]" :class="{'active-link':$page.url.startsWith(navLink.path)}">{{ navLink.name }}</p>
+<!--    <p class="w-[100%] h-[100%]" :class="{'active-link':$page.url.startsWith(navLink.path)}">{{ navLink.name }}</p>-->
+    <p class="w-[100%] h-[100%]" :class="{'active-link':$page.url.indexOf(navLink.path) >= 0}">{{ navLink.name }}</p>
   </Link>
 </template>
 <script>
@@ -31,6 +32,8 @@ section {
 }
 
 li {
+    transition: all ease-in 200ms;
+    cursor: pointer;
     display: flex;
     align-items: center;
     height: 40px;

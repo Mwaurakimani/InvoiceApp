@@ -58,4 +58,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function designation()
+    {
+        return $this->belongsToMany(Designation::class,DesignationUser::class,'user_id','designation_id','id','id');
+    }
+
+    public function vehicle()
+    {
+       return $this->belongsToMany(Vehicle::class,UserVehicle::class);
+    }
 }

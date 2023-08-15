@@ -1,13 +1,12 @@
 <template>
     <section class="p-[10px]">
         <div class="heading my-[10px] md:my-[0px]">
-            <h1>Driver : {{ 'XXXXXXXXXXX' }}</h1>
+            <h1>Driver : {{ driver.id }}</h1>
         </div>
         <div class="flex mb-[20px] py-[10px]">
             <ul class="flex gap-3">
-                <Link as="button" :href="route('vehicle.CreateVehicle')" class="px-[10px] button-fill-blue">Add New
-                </Link>
-                <Link as="button" :href="route('vehicle.EditVehicle',[1])" class="px-[10px] button-fill-blue">Edit
+                <Link as="button" :href="route('accounts.EditAccount',[driver.id])" class="px-[10px] button-fill-blue">
+                    Edit
                 </Link>
                 <Link as="button" href="'/'" class="px-[10px] border-red-400 text-gray-50 bg-red-400">Delete</Link>
             </ul>
@@ -19,36 +18,32 @@
                         <form @submit.prevent class="p-[10px] w-[100%] md:w-[200px]">
                             <div class="w-[100%]">
                                 <img class="w-[100%] h-[auto] mb-[10px]" :src="app_defaults.systemImages+'User.png'">
-                                <div class="input-group-default">
-                                    <label>Update Image</label>
-                                    <input type="file">
-                                </div>
                             </div>
                         </form>
                         <form @submit.prevent class="mb-[20px] w-[100%] md:w-[420px] lg:w-[48%]">
                             <div class="md:flex md:gap-1">
-                                <div class="input-group-default">
-                                    <label>First Name</label>
-                                    <input type="text">
+                                <div class="w-[50%] input-group-default">
+                                    <label>First name</label>
+                                    <p>{{ driver.first_name }}</p>
                                 </div>
-                                <div class="input-group-default">
-                                    <label>Last Name</label>
-                                    <input type="text">
+                                <div class="w-[50%] input-group-default">
+                                    <label>Last name</label>
+                                    <p>{{ driver.last_name }}</p>
                                 </div>
                             </div>
                             <div class="md:flex gap-1">
-                                <div class="input-group-default">
+                                <div class=" w-[50%] input-group-default">
                                     <label>National ID</label>
-                                    <input type="text">
+                                    <p class="">{{ driver.national_id }}</p>
                                 </div>
-                                <div class="input-group-default">
+                                <div class="w-[50%] input-group-default">
                                     <label>Phone</label>
-                                    <input type="text">
+                                    <p class="">{{ driver.phone }}</p>
                                 </div>
                             </div>
                             <div class="input-group-default">
                                 <label>Email</label>
-                                <input type="email">
+                                <p class="">{{ driver.email }}</p>
                             </div>
 
                         </form>
@@ -61,24 +56,22 @@
                                 <div class="w-[100%]">
                                     <div class="input-group-default">
                                         <label>Vehicle Registration</label>
-                                        <input type="text">
-                                        <!--                                        <div class="w-[100%]" >-->
-                                        <!--                                            <ul class="bg-gray-100" >-->
-                                        <!--                                                <li>KAG 000Y</li>-->
-                                        <!--                                                <li>KAG 000Y</li>-->
-                                        <!--                                                <li>KAG 000Y</li>-->
-                                        <!--                                                <li>KAG 000Y</li>-->
-                                        <!--                                                <li>KAG 000Y</li>-->
-                                        <!--                                                <li>KAG 000Y</li>-->
-                                        <!--                                            </ul>-->
-                                        <!--                                        </div>-->
+                                        <input type="text" v-model="vehicle" @keyup.prevent.stop="getVehicle">
+                                        <div class="w-[100%]">
+                                            <ul v-if="foundVehicles.length > 0 " class="bg-gray-100">
+                                                <li @click.prevent.stop="bindVehicle(item)"
+                                                    v-for="item in foundVehicles">{{ item.Registration_number }}
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <button class="px-[10px] button-fill-blue">Assign</button>
+                                <button @click.prevent.stop="assignVehicle" class="px-[10px] mx-[5px] button-fill-blue">Assign</button>
+                                <button v-if="boundVehicle" @click.prevent.stop="un_assignVehicle" class="px-[10px] bg-red-400 text-gray-50 border-1 border-red-400">Remove</button>
                             </form>
                         </div>
-                        <div class="md:w-[49%]">
-                            <VehicleCard></VehicleCard>
+                        <div v-if="boundVehicle"  class="md:w-[49%]">
+                            <VehicleCard :vehicle="boundVehicle" :title="boundVehicle.name"></VehicleCard>
                         </div>
                     </div>
                 </AppCardHolder>
@@ -119,6 +112,7 @@ import DriverCard from "@/appComponents/DriverCard.vue";
 import DetailsComponent from "@/Pages/Booking/Components/DetailsComponent.vue";
 import Trips from "@/Pages/Vehicles/Components/Trips.vue";
 import Mileage from "@/Pages/Vehicles/Components/Mileage.vue";
+import _ from 'lodash';
 
 export default {
     computed: {
@@ -130,8 +124,61 @@ export default {
     layout: DashboardLayout,
     data() {
         return {
-            active_tab: 'Details'
+            active_tab: 'Details',
+            vehicle: null,
+            foundVehicles: [],
+            boundVehicle: this.driver.vehicle.length > 0 ? this.driver.vehicle[0] : null,
         }
+    },
+    props: ['driver'],
+    methods: {
+        getVehicle: _.throttle(function () {
+
+            axios.post(route('drivers.get_vehicle'), {
+                reg_no: this.vehicle
+            }).then((response) => {
+                this.foundVehicles = response.data
+            }).catch((error) => {
+                console.log("error: " + error)
+            })
+
+        }, 500),
+        clearVehicle: _.throttle(function (response) {
+            this.foundVehicles = []
+        }, 2000),
+        bindVehicle(item) {
+            this.boundVehicle = item
+
+            this.clearVehicle()
+            this.vehicle = null
+        },
+        assignVehicle(){
+            if(this.boundVehicle == null){
+                alert("No selected Vehicle")
+                return
+            }
+
+            axios.post(route('drivers.assign_vehicle'), {
+                driver: this.driver.id,
+                vehicle: this.boundVehicle.id
+            }).then((response) => {
+                alert("Assigned")
+            }).catch((error) => {
+                alert("Unable to assign")
+            })
+        },
+        un_assignVehicle(){
+            axios.post(route('drivers.un_assignVehicle'), {
+                driver: this.driver.id,
+                vehicle: this.boundVehicle.id
+            }).then((response) => {
+                alert("Removed")
+                window.location.reload()
+            }).catch((error) => {
+                alert("Unable to assign")
+            })
+        }
+
     }
 }
 </script>

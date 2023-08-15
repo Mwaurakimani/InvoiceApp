@@ -3,25 +3,25 @@
         <form @submit.prevent class="mb-[20px] p-[10px] md:w-[100%] lg:w-[48%]">
             <h5>Update Mileage</h5>
             <div class="input-group-default">
-                <label>Previous Reading (km)</label>
-                <input type="number">
-            </div>
-            <div class="input-group-default">
                 <label>Current Reading (km)</label>
-                <input type="number">
+                <input type="number" v-model="mileage.current_reading">
             </div>
             <div class="input-group-default">
                 <label>Mileage At</label>
-                <select>
-                    <option>Trip Start</option>
-                    <option>Trip Paused</option>
-                    <option>Trip Resumed</option>
-                    <option>Trip End</option>
+                <select v-model="mileage.mileage_at">
+                    <option value="Start" >Trip Start</option>
+                    <option value="Pause" >Trip Paused</option>
+                    <option value="Resume" >Trip Resumed</option>
+                    <option value="End" >Trip End</option>
                 </select>
             </div>
-            <div class="input-group-default">
-                <label>Client Name</label>
-                <input type="datetime-local">
+            <div v-if="mileage.date_created" class="input-group-default">
+                <label>Current Time</label>
+                <input type="datetime-local" v-model="mileage.date_created">
+            </div>
+            <div class="pt-[20px]">
+                <button v-if="mileage.id != null" class="px-[10px]" @click.prevent.stop="updateEntry" >Update</button>
+                <button v-else  class="px-[10px]" @click.prevent.stop="saveEntry" >Save</button>
             </div>
         </form>
     </div>
@@ -36,7 +36,15 @@ export default {
             return app_defaults
         }
     },
-    props: ['type']
+    props: ['type','mileage'],
+    methods:{
+        saveEntry(){
+            this.$emit('saveEntry')
+        },
+        updateEntry(){
+            this.$emit('updateEntry')
+        }
+    },
 }
 </script>
 

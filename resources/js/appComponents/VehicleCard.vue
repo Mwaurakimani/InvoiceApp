@@ -1,24 +1,24 @@
 <template>
-  <AppCardHolder :title="'Vehicle'" class="mb-[20px] w-[100%]">
-    <div class="w-[100%] p-[2px] mb-[10px]" style="border-radius: 8px;overflow: hidden">
+  <AppCardHolder :title="title ?? 'Vehicle'" class="mb-[20px] w-[100%]">
+    <Link as="div" :href="route('vehicle.ViewVehicle',[vehicle.id])" class="w-[100%] p-[2px] mb-[10px]" style="border-radius: 8px;overflow: hidden">
       <img class="w-[100%]" :src="app_defaults.systemImages+'van.jpg'">
-    </div>
+    </Link>
     <ul class="">
       <li class="flex small-text my-[5px]">
         <label class=" w-[120px] font-semibold text-gray-500">Registration:</label>
-        <p>KDA 000A</p>
+        <p>{{ vehicle.Registration_number }}</p>
       </li>
       <li class="flex small-text my-[5px]">
         <label class=" w-[120px] font-semibold text-gray-500">Fuel Capacity:</label>
-        <p>75 Litres</p>
+        <p>{{ vehicle.fuel_capacity }} Litres</p>
       </li>
       <li class="flex small-text my-[5px]">
         <label class=" w-[120px] font-semibold text-gray-500">Engine Size:</label>
-        <p>2500cc</p>
+        <p>{{ vehicle.engine_size }}cc</p>
       </li>
       <li class="flex small-text my-[5px]">
         <label class=" w-[120px] font-semibold text-gray-500">Seats:</label>
-        <p>14</p>
+        <p>{{ vehicle.seats }}</p>
       </li>
     </ul>
   </AppCardHolder>
@@ -28,6 +28,7 @@ import AppCardHolder from "@/appComponents/AppCardHolder.vue"
 
 export default {
   name: 'VehicleCard',
+    props:['vehicle','title'],
   components: {AppCardHolder},
 }
 </script>

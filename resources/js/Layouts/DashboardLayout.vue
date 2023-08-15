@@ -30,7 +30,7 @@
                 </div>
                 <div class="user flex space-x-4 items-center">
                     <img class="w-[30px] h-[30px]" :src="app_defaults.systemImages +'user.png'">
-                    <p>Username</p>
+                    <p>{{ $page.props.auth.user.first_name  }}</p>
                 </div>
                 <div class="user flex space-x-4 items-center">
                     <Link as="button" :href="'/logout'" method="post" class="button-fill-blue px-[10px]" >Log out</Link>
@@ -125,7 +125,7 @@ export default {
                     path: "/Drivers"
                 },
                 {
-                    name: "Accounts",
+                    name: "Account",
                     path: "/Accounts"
                 },
             ]

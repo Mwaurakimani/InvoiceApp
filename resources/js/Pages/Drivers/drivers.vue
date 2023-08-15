@@ -1,13 +1,13 @@
 <template>
     <section class="block lg:hidden">
+        <h1 class="p-[20px]">Drivers</h1>
         <div class="flex h-[50px] mb-[20px] p-[20px] items-center justify-center">
             <input class="w-[100%]" type="search" placeholder="Search by Name...">
         </div>
         <div class="px-[10px] flex">
-            <Link as="button" :href="route('drivers.CreateDriver')" class="px-[10px]">Add Driver</Link>
         </div>
-        <TripsListView class="p-[10px] mb-[20px]">
-            <DriverCard>
+        <TripsListView v-slot="data" :dataset="drivers" class="p-[10px] mb-[20px]">
+            <DriverCard :driver="data.item">
                 <ul class="">
                     <li class="flex small-text my-[5px]">
                         <label class=" w-[120px] font-semibold text-gray-500">Total Trips:</label>
@@ -49,7 +49,6 @@
         </div>
         <div class="flex justify-between py-[10px]">
             <ul>
-                <Link as="button" :href="route('drivers.CreateDriver')" class="button-fill-blue px-[10px]" >Add Driver</Link>
             </ul>
             <div>
                 <input type="search" class="w-[300px]" placeholder="Search by Registration Number">
@@ -81,18 +80,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <Link :href="route('drivers.ViewDriver',[1])" as="tr" class="bg-white border-b" v-for="item in 10">
+                <Link :href="route('drivers.ViewDriver',[item.id])" as="tr" class="bg-white border-b" v-for="item in drivers">
                     <td class="px-6 py-3 small-text font-extrabold">
                         <img class="w-[50px]" :src="app_defaults.systemImages+'User.png'" style="border-radius: 5px">
                     </td>
                     <th scope="row" class="px-6 small-text font-medium py-[10px] text-gray-900 whitespace-nowrap">
-                        Brian Kimani
+                        {{ item.first_name }} {{item.last_name}}
                     </th>
                     <td class="px-10 my-10px">
-                        0719445697
+                        {{item.phone}}
                     </td>
                     <td class="px-5 small-text">
-                        KAA 000y
+                        {{ item.vehicle.length > 0 ? item.vehicle[0].Registration_number : 'N/A' }}
                     </td>
                     <td class="px-5">
                         <div class="pill small-text">
@@ -148,7 +147,8 @@ export default {
         }
     },
     components: {DriverCard, VehicleCard, TripsListView, TripCard},
-    layout:DashboardLayout
+    layout:DashboardLayout,
+    props:['drivers']
 }
 </script>
 

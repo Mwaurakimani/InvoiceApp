@@ -2,13 +2,13 @@
     <section class="block lg:hidden">
         <h1 class="p-[20px]">Vehicles</h1>
         <div class="flex h-[50px] mb-[20px] p-[20px] items-center justify-center">
-            <input class="w-[100%]" type="search" placeholder="Search by Reg No.">
+            <input class="w-[100%]" type="search" placeholder="Search...">
         </div>
         <div class="px-[10px] flex">
-            <Link as="button" :href="route('vehicle.CreateVehicle')" class="px-[10px]">Add Vehicle</Link>
+            <Link as="button" :href="route('accounts.CreateAccount')" class="px-[10px]">Add User</Link>
         </div>
-        <TripsListView v-slot="data" :dataset="vehicles" class="p-[10px] mb-[20px]">
-            <VehicleCard :vehicle="data.item" ></VehicleCard>
+        <TripsListView v-slot="data" :dataset="accounts" class="p-[10px] mb-[20px]">
+            <UserCard :item="data.item"></UserCard>
         </TripsListView>
 
 
@@ -37,20 +37,20 @@
 
     <section class="hidden lg:block p-[10px]">
         <div class="heading">
-            <h1>Vehicles</h1>
+            <h1>Accounts</h1>
         </div>
         <div class="flex justify-between py-[10px]">
             <ul>
-                <Link as="button" :href="route('vehicle.CreateVehicle')" class="button-fill-blue px-[10px]">Add
-                    Vehicle
+                <Link as="button" :href="route('accounts.CreateAccount')" class="button-fill-blue px-[10px]">Add
+                    Account
                 </Link>
             </ul>
             <div>
-                <input type="search" class="w-[300px]" placeholder="Search by Registration Number">
+                <input type="search" placeholder="Search...">
             </div>
         </div>
         <div>
-            <p class="lighter-text mb-[20px] small-text">Total vehicles found (100)</p>
+            <p class="lighter-text mb-[20px] small-text">Total Users fount (100)</p>
         </div>
 
         <div class="relative app-card mb-[20px] overflow-x-auto">
@@ -58,16 +58,16 @@
                 <thead class="text-xs text-gray-800 uppercase bg-gray-50 ">
                 <tr>
                     <th scope="col" class="px-6 py-3">
-                        Vehicle
+                        User ID
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Reg No.
+                        Name
                     </th>
                     <th scope="col" class="px-10 py-3">
-                        Driver
+                        Email
                     </th>
                     <th scope="col" class="px-5 py-3">
-                        Booking Status
+                        Designation
                     </th>
                     <th scope="col" class="px-5 py-3">
                         Status
@@ -75,28 +75,29 @@
                 </tr>
                 </thead>
                 <tbody>
-                <Link :href="route('vehicle.ViewVehicle',[item.id])" as="tr" class="bg-white border-b" v-for="item in vehicles">
-                    <td class="px-6 small-text font-extrabold">
-                        <img class="w-[80px]" :src="app_defaults.systemImages+'Van.jpg'" style="border-radius: 5px">
-                    </td>
-                    <th scope="row" class="px-6 small-text font-medium py-[10px] text-gray-900 whitespace-nowrap">
-                        {{ item.Registration_number }}
+                <Link :href="route('accounts.ViewAccount',[item.id])" as="tr" class="cursor-pointer hover:text-white hover:bg-blue-500 border-b" v-for="item in accounts">
+                    <th scope="row" class="px-6 small-text font-medium whitespace-nowrap">
+                        {{ item.id }}
                     </th>
+                    <td class="px-6 small-text font-extrabold py-3">
+                        {{ item.first_name +" "+ item.last_name }}
+                    </td>
                     <td class="px-10 my-10px">
-                        {{item.driver.length > 0 ? item.driver[0].first_name+" "+item.driver[0].first_name  : 'N/A'}}
+                        {{ item.email }}
                     </td>
                     <td class="px-5 small-text">
-                        In Transit
+                        {{ item.designation[0].name }}
                     </td>
                     <td class="px-5">
-                        <div class="pill small-text">
-                            <p> {{ item.status }}</p>
+                        <div class="pill w-[100%] flex small-text" style="justify-content: center">
+                            <p>Active</p>
                         </div>
                     </td>
                 </Link>
                 </tbody>
             </table>
         </div>
+
 
         <nav aria-label="Page navigation example">
             <ul class="inline-flex -space-x-px text-sm">
@@ -136,64 +137,17 @@
 </template>
 <script>
 import DashboardLayout from "@/Layouts/DashboardLayout.vue";
-import TripCard from "@/appComponents/TripCard.vue";
 import TripsListView from "@/appComponents/TripsListView.vue";
-import VehicleCard from "@/appComponents/VehicleCard.vue";
-import {app_defaults} from "@/appDefaults/config.js";
+import TripCard from "@/appComponents/TripCard.vue";
+import UserCard from "@/appComponents/UserCard.vue";
 
 export default {
-    computed: {
-        app_defaults() {
-            return app_defaults
-        }
-    },
-    components: {VehicleCard, TripsListView, TripCard},
+    name: "accounts",
+    components: {TripCard, TripsListView, UserCard},
     layout: DashboardLayout,
-    props: ['vehicles']
+    props: ['accounts']
 }
 </script>
-
-
 <style scoped lang="scss">
-@import "../../../scss/defaults";
 
-.heading {
-    width: 100%;
-    height: 40px;
-}
-
-td {
-    li {
-        display: flex;
-
-        label {
-            width: 90px;
-            color: dodgerblue;
-        }
-    }
-}
-
-table {
-    tbody {
-        tr:hover {
-            cursor: pointer;
-            background-color: #64acf3 !important;
-            color: white !important;
-
-            ul {
-                label {
-                    color: white;
-                }
-
-                p {
-                    color: white;
-                }
-            }
-
-            th {
-                color: white;
-            }
-        }
-    }
-}
 </style>

@@ -1,25 +1,25 @@
 <template>
     <section class="p-[10px]">
         <div class="heading my-[10px] md:my-[0px]">
-            <h1>Vehicle : {{ 'XXXXXXXXXXX' }}</h1>
+            <h1>Vehicle : {{ vehicle.id }}</h1>
         </div>
         <div class="flex mb-[20px] py-[10px]">
             <ul class="flex gap-3">
                 <Link as="button" :href="route('vehicle.CreateVehicle')" class="px-[10px] button-fill-blue" >Add New</Link>
-                <Link as="button" :href="route('vehicle.EditVehicle',[1])" class="px-[10px] button-fill-blue " >Edit</Link>
+                <Link as="button" :href="route('vehicle.EditVehicle',[vehicle.id])" class="px-[10px] button-fill-blue " >Edit</Link>
                 <Link as="button" href="'/'" class="px-[10px] border-red-400 text-gray-50 bg-red-400" >Delete</Link>
             </ul>
         </div>
 
         <section class="flex flex-wrap md:gap-[20px]">
             <article class="sm:w-[100%] md:w-[300px]" >
-                <VehicleCard :app_defaults="app_defaults"/>
-                <DriverCard :app_defaults="app_defaults"/>
+                <VehicleCard :title="vehicle.Name" :vehicle="vehicle" :app_defaults="app_defaults"/>
+                <DriverCard v-if="vehicle.driver.length > 0" :driver="vehicle.driver[0]" :app_defaults="app_defaults"/>
             </article>
             <article class="w-[100%] md:w-[calc(100%-320px)]" >
                 <AppCardHolder :title="'Trip Details'" :pill="'Active'" class="w-[100%]" >
                     <div class="w-[100%]">
-                        <mileage :custom="{disable_edit:true}"></mileage>
+                        <mileage :mileages="mileage" :custom="{disable_edit:true}"></mileage>
                     </div>
                 </AppCardHolder>
             </article>
@@ -47,7 +47,8 @@ export default {
         return{
             active_tab:'Details'
         }
-    }
+    },
+    props:['vehicle','mileage']
 }
 </script>
 

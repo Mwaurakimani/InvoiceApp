@@ -15,6 +15,7 @@
             <form action="#" @submit.prevent="logIn">
                 <div class="app-card w-[100%] p-[20px]">
                     <h4 class="block w-[100%] mb-[20px] text-left" >Log in</h4>
+                    <span class="text-red-500 px-[5px]">{{ $page.props.errors.email }}</span>
                     <div class="input-group">
                         <label for="email" class="small-text lighter-text"  >Email</label>
                         <input v-model="loginForm.email" type="email" id="email" placeholder="E-mail">

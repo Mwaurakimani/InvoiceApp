@@ -1,13 +1,14 @@
 <template>
     <section class="block lg:hidden">
+        <h1 class="p-[20px]">Booking</h1>
         <div class="flex h-[50px] mb-[20px] p-[20px] items-center justify-center">
             <input class="w-[100%]" type="search" placeholder="Search ny booking ID">
         </div>
         <div class="px-[10px] flex">
             <Link as="button" :href="route('booking.CreateBooking')" class="px-[10px]">Add Booking</Link>
         </div>
-        <TripsListView class="p-[10px] mb-[20px]">
-            <TripCard>
+        <TripsListView v-slot="data" :dataset="bookings" class="p-[10px] mb-[20px]">
+            <TripCard :trip="data.item">
 
             </TripCard>
         </TripsListView>
@@ -68,35 +69,35 @@
                 </tr>
                 </thead>
                 <tbody>
-                <Link :href="route('booking.ViewBooking',[1])" as="tr" class="bg-white border-b" v-for="item in 10">
+                <Link :href="route('booking.ViewBooking',[item.id])" as="tr" class="bg-white border-b" v-for="item in bookings">
                     <th scope="row" class="px-6 small-text font-medium text-gray-900 whitespace-nowrap">
-                        000000000
+                        {{item.id}}
                     </th>
                     <td class="px-6 small-text font-extrabold">
-                        Brian Kimani
+                        {{ item.clientName }}
                     </td>
                     <td class="px-10 my-10px">
                         <ul class="small-text py-3">
                             <li>
                                 <label>From</label>
-                                <p>Rigeways</p>
+                                <p>{{ item.pickUpLocation }}</p>
                             </li>
                             <li>
                                 <label>To</label>
-                                <p>Rigeways</p>
+                                <p>{{ item.destination }}</p>
                             </li>
                             <li>
                                 <label>Date</label>
-                                <p>Mon Jan 3 2023</p>
+                                <p>{{ new Date(item.pickUpTime).toLocaleDateString(undefined,app_defaults.dateOption) }}</p>
                             </li>
-                            <li>
+                            <li v-if="item.returnTime" >
                                 <label>Return Date</label>
-                                <p>Mon Jan 3 2023</p>
+                                <p>{{ new Date(item.returnTime).toLocaleDateString(undefined,app_defaults.dateOption) }}</p>
                             </li>
                         </ul>
                     </td>
                     <td class="px-5 small-text">
-                        Ksh 8,000
+                        Ksh {{ app_defaults.currencyFormat.format(item.price) }}
                     </td>
                     <td class="px-5">
                         <div class="pill small-text">
@@ -142,10 +143,17 @@
 import DashboardLayout from "@/Layouts/DashboardLayout.vue";
 import TripCard from "@/appComponents/TripCard.vue";
 import TripsListView from "@/appComponents/TripsListView.vue";
+import {app_defaults} from "../../appDefaults/config.js";
 
 export default {
+    computed: {
+        app_defaults() {
+            return app_defaults
+        }
+    },
     components: { TripsListView, TripCard},
-    layout:DashboardLayout
+    layout:DashboardLayout,
+    props:['bookings']
 }
 </script>
 
